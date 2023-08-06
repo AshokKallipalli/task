@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function handleRadioClick(radio) {
+        const containerClass = radio.value;
+        const containers = document.querySelectorAll('.main-section');
+
+        for (const container of containers) {
+            if (container.classList.contains(containerClass)) {
+                container.classList.add('highlight');
+            } else {
+                container.classList.remove('highlight');
+            }
+        }
+    }
+
+    function selectDefaultRadioButton() {
+        const defaultRadioValue = "html2";
+        const defaultRadio = document.querySelector(`input[value="${defaultRadioValue}"]`);
+        if (defaultRadio) {
+            defaultRadio.click();
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', selectDefaultRadioButton);
+
+</script>
+
+<body>
+
+    <div class="section">
+        <div class="container">
+            <div class="heading">
+                <h1>Bundle & Save</h1>
+            </div>
+        </div>
+        <!--section one-->
+        <form>
+            <div class="container main-section html1">
+                <div class="inner-section">
+                    <div class="card-1">
+                        <div class="inner-card-1">
+                            <!-- <form> -->
+                            <ul>
+                                <li> <input type="radio" id="html1" name="fav_language" value="html1"
+                                        onclick="handleRadioClick(this)"></li>
+                                <li> <label for="html"><span>1 Pair</span></br><span class="span">DKK
+                                            195.00</span></label></li>
+                            </ul>
+                            <!-- </form> -->
+                        </div>
+                        <div class="inner-card-2">
+                            <ul>
+                                <li class="discount">50% OFF</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--section-2-->
+            <div class="container main-section html2">
+                <div class="inner-section">
+                    <div class="card-1 card-2">
+                        <div class="inner-card-1">
+                            <!-- <form> -->
+                            <ul>
+                                <li> <input type="radio" id="html2" name="fav_language" value="html2" checked
+                                        onclick="handleRadioClick(this)"></li>
+                                <li> <label for="html"><span>2 Pair</span></br><span class="span">DKK
+                                            345.00</span></label></li>
+                            </ul>
+                            <!-- </form> -->
+                        </div>
+                        <div class="inner-card-2">
+                            <ul>
+                                <li style="font-size: 14px;color: gray;"><s>DKK 195.00</s></li>
+                            </ul>
+                        </div>
+                        <div class="inner-card-3">
+                            <ul>
+                                <li><span style="color:#0b775d;font-weight: bold;">Most Popular</span></br><span
+                                        class="span">40% OFF</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-3">
+                        <ul class="form2">
+                            <li>
+                                <span style="margin-left: 30px;">Size</span>
+                                <span style="margin-left: 46px;">Colour</span>
+                            </li>
+                            <li>
+                                <span>
+                                    <label for="items">#1</label>
+                                    <select name="s">
+                                        <option value="S">S</option>
+                                        <option value="S2">S1</option>
+                                        <option value="S3">S2</option>
+                                        <option value="S4">S3</option>
+                                    </select>
+                                </span>
+                                <span>
+                                    <select name="colour">
+                                        <option value="colour">Colour</option>
+                                        <option value="colour1">colour 1</option>
+                                        <option value="colour2">colour 2</option>
+                                        <option value="colour3">colour 3</option>
+                                    </select>
+                                </span>
+                            </li>
+
+                            <li>
+                                <span>
+                                    <label for="items">#2</label>
+                                    <select name="s">
+                                        <option value="S">S</option>
+                                        <option value="S2">S1</option>
+                                        <option value="S3">S2</option>
+                                        <option value="S4">S3</option>
+                                    </select>
+                                </span>
+                                <span>
+                                    <select name="colour">
+                                        <option value="colour">Colour</option>
+                                        <option value="colour1">Colour 1</option>
+                                        <option value="colour2">Colour 2</option>
+                                        <option value="colour3">Colour 3</option>
+                                    </select>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--section three-->
+            <div class="container main-section html3">
+                <div class="inner-section">
+                    <div class="card-1">
+                        <div class="inner-card-1">
+                            <!-- <form> -->
+                            <ul>
+                                <li> <input type="radio" id="html3" name="fav_language" value="html3"
+                                        onclick="handleRadioClick(this)"></li>
+                                <li> <label for="html"><span>3 Pair</span></br><span class="span">DKK
+                                            528.00</span></label></li>
+                            </ul>
+                            <!-- </form> -->
+                        </div>
+                        <div class="inner-card-2">
+                            <ul>
+                                <li class="discount">60% OFF</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="inner-section1">
+                <ul class="total-price">
+                    <li style="color:#0dc292">Free 2 Days Shipping</li>
+                    <li style="font-weight: 500;">Total : DKK 360.00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="button-section">
+                <button class="btn" type="submit">+ Add To Cart</button>
+                <p>© Powered by pumper</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
